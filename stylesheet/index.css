@@ -3,42 +3,71 @@ body{
     font-family: 'Raleway', sans-serif;
 }
 
-.banner{
-    width: 100px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-size: cover;
-    overflow: hidden;
-}
-
-.navigatienav{
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
-    margin: 0 auto;
-    list-style-type: none;
-    background-color: #d7d7d7;
-    height: auto;
-}
-.navigatie{
-    text-align: center;
-    margin-bottom: 20px;
-    border-top: 1px solid rgb(0, 0, 0);
-    border-bottom: none;
+/* Navigatiebalk */
+.navigation {
     width: 100%;
-}
-.navitem{
-    padding: 4px 32px;
+    background-color: #ffffff;
+    border-bottom: 1px solid rgb(0, 0, 0);
+    padding: 10px 20px;
 }
 
-.navitem a{
-    color:rgb(186, 15, 15);
-    text-decoration: none;
-    font-size: 30px;
+/* Navigatie container */
+.navigationnav {
+    display: flex;
+    align-items: center; /* Zorgt dat logo en tekst verticaal uitgelijnd zijn */
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
 }
-.navitem a:hover{
-    color:rgb(159, 81, 81);
+
+.linktext{
+    width: 100px;
+}
+/* Logo (Banner) */
+.banner {
+    width: 80px;
+    height: auto;
+    margin-right: 20px; /* Ruimte tussen logo en tekstlinks */
+}
+
+/* Menu-items */
+.navitem {
+    margin-right: 30px; /* Ruimte tussen de menu-items */
+}
+
+/* Menu-links */
+.navitem a {
+    color: rgb(186, 15, 15);
     text-decoration: none;
+    font-size: 18px;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.navitem a:hover {
+    color: rgb(159, 81, 81);
+}
+
+/* Responsive: Zorgt dat menu op kleinere schermen netjes blijft */
+@media (max-width: 768px) {
+    .navigationnav {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .navitem {
+        margin: 10px 0;
+    }
+}
+
+figure {
+    margin: 0;
+    padding: 0;
+    width: 100%; 
+}
+
+.video-bg {
+    width: 100%;  /* Zorgt ervoor dat de video de volledige breedte inneemt */
+    height: auto; /* Houdt de aspect ratio intact */
+    display: block; /* Verwijdert extra witruimte onder de video */
 }
