@@ -6,49 +6,57 @@ body{
 /* Navigatiebalk */
 .navigation {
     width: 100%;
-    background-color: #ffffff;
-    border-bottom: 1px solid rgb(0, 0, 0);
+    background-color: #4848488c;
     padding: 10px 20px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
 }
 
 /* Navigatie container */
 .navigationnav {
     display: flex;
-    align-items: center; /* Zorgt dat logo en tekst verticaal uitgelijnd zijn */
+    align-items: center; 
     list-style-type: none;
     padding: 0;
     margin: 0;
 }
 
 .linktext{
-    width: 100px;
+    width: 100pxl;
 }
-/* Logo (Banner) */
+
 .banner {
     width: 80px;
     height: auto;
-    margin-right: 20px; /* Ruimte tussen logo en tekstlinks */
+    margin-right: 20px;
+}
+h1{
+    color:#ffc400;
+    font-size: 50px;
 }
 
-/* Menu-items */
 .navitem {
-    margin-right: 30px; /* Ruimte tussen de menu-items */
+    margin-right: 30px;
 }
 
-/* Menu-links */
+
 .navitem a {
-    color: rgb(186, 15, 15);
+    color: rgb(255, 255, 255);
     text-decoration: none;
     font-size: 18px;
     font-weight: bold;
     transition: color 0.3s ease;
 }
 
+.head{
+    padding-top: 300px;
+}
 .navitem a:hover {
     color: rgb(159, 81, 81);
 }
 
-/* Responsive: Zorgt dat menu op kleinere schermen netjes blijft */
 @media (max-width: 768px) {
     .navigationnav {
         flex-direction: column;
@@ -60,14 +68,22 @@ body{
     }
 }
 
-figure {
-    margin: 0;
-    padding: 0;
-    width: 100%; 
+.video-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh; /* Video vult het hele scherm */
+    overflow: hidden;
+    z-index: -1; /* Zet de video achter de navigatie */
 }
 
-.video-bg {
-    width: 100%;  /* Zorgt ervoor dat de video de volledige breedte inneemt */
-    height: auto; /* Houdt de aspect ratio intact */
-    display: block; /* Verwijdert extra witruimte onder de video */
+.video-container video {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Zorgt dat de video het hele scherm bedekt */
 }
