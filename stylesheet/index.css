@@ -3,18 +3,15 @@ body{
     font-family: 'Raleway', sans-serif;
 }
 
-/* Navigatiebalk */
 .navigation {
     width: 100%;
     background-color: #4848488c;
-    padding: 10px 20px;
     position: fixed;
     top: 0;
     left: 0;
     z-index: 1000;
 }
 
-/* Navigatie container */
 .navigationnav {
     display: flex;
     align-items: center; 
@@ -23,6 +20,7 @@ body{
     margin: 0;
 }
 
+
 .linktext{
     width: 100pxl;
 }
@@ -30,8 +28,8 @@ body{
 .banner {
     width: 80px;
     height: auto;
-    margin-right: 20px;
 }
+
 h1{
     color:#ffc400;
     font-size: 50px;
@@ -55,17 +53,6 @@ h1{
 }
 .navitem a:hover {
     color: rgb(240, 188, 58);
-}
-
-@media (max-width: 768px) {
-    .navigationnav {
-        flex-direction: column;
-        align-items: flex-start;
-    }
-
-    .navitem {
-        margin: 10px 0;
-    }
 }
 
 .video-container {
@@ -119,7 +106,45 @@ h1{
     z-index: 10; 
 }
 
-article{
+.article-index{
     position: absolute;
     top: 100%;
+}
+
+.cards-container {
+    width: 100%;
+    position: absolute;
+    top: 10%;
+    display: flex;
+    flex-wrap: wrap; /* Zorgt ervoor dat ze naar de volgende regel gaan als er geen ruimte is */
+    justify-content: center;
+    align-items: center;
+    gap: 20px; /* Voegt ruimte tussen de kaarten toe */
+    padding: 20px;
+}
+
+.card {
+    background-color: #f4f4f4;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    width: 300px; /* Maximale breedte */
+    text-align: center;
+}
+
+.card h2 {
+    color: rgb(254, 195, 0);
+}
+
+.card p {
+    font-size: 16px;
+    color: #333;
+}
+
+/* 🔥 Responsive: Op kleinere schermen onder elkaar */
+@media (max-width: 768px) {
+    .cards-container {
+        flex-direction: column;
+        align-items: center;
+    }
 }
