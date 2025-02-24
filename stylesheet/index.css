@@ -3,6 +3,12 @@ body{
     font-family: 'Raleway', sans-serif;
 }
 
+:root {
+    --primary-color: #ffffff;
+    --secondary-color: #fec300;
+    --border-color: #ddd;
+}
+
 .navigation {
     width: 100%;
     background-color: #4848488c;
@@ -32,7 +38,7 @@ body{
 }
 
 h1{
-    color:#ffc400;
+    color: var(--secondary-color);
     font-size: 50px;
 }
 
@@ -42,7 +48,7 @@ h1{
 
 
 .navitem a {
-    color: rgb(255, 255, 255);
+    color: var(--primary-color);
     text-decoration: none;
     font-size: 23px;
     font-weight: bold;
@@ -53,13 +59,13 @@ h1{
     padding-top: 300px;
 }
 .navitem a:hover {
-    color: rgb(240, 188, 58);
+    color: var(--secondary-color);
 }
 
 .video-container {
     position: relative;
     width: 100%;
-    height: 100vh; /* Video vult het hele scherm */
+    height: 100vh; 
     overflow: hidden;
 }
 
@@ -90,7 +96,7 @@ h1{
     top: 50%;
     left: 5%;
     transform: translateY(-50%);
-    color: rgb(254, 195, 0);
+    color: var(--secondary-color);
     font-size: 2rem;
     font-weight: bold;
     z-index: 10; 
@@ -101,7 +107,7 @@ h1{
     top: 55%;
     left: 5%;
     transform: translateY(-50%);
-    color: rgb(254, 195, 0);
+    color: var(--secondary-color);
     font-size: 21px;
     font-weight: bold;
     z-index: 10; 
@@ -117,24 +123,23 @@ h1{
     position: absolute;
     top: 10%;
     display: flex;
-    flex-wrap: wrap; /* Zorgt ervoor dat ze naar de volgende regel gaan als er geen ruimte is */
+    flex-wrap: wrap;
     justify-content: center;
     align-items: center;
-    gap: 20px; /* Voegt ruimte tussen de kaarten toe */
-    padding: 20px;
+    gap: 20px; 
 }
 
 .card {
     background-color: #f4f4f4;
     border-radius: 10px;
     padding: 20px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    width: 300px; /* Maximale breedte */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 300px; 
     text-align: center;
 }
 
 .card h2 {
-    color: rgb(254, 195, 0);
+    color: var(--secondary-color);
 }
 
 .card p {
@@ -142,7 +147,32 @@ h1{
     color: #333;
 }
 
-/* 🔥 Responsive: Op kleinere schermen onder elkaar */
+table {
+    width: 80%;
+    margin: 20px auto;
+    border-collapse: collapse;
+    background: var(--primary-color);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+th, td {
+    padding: 12px;
+    border: 1px solid #ddd;
+    text-align: left;
+}
+
+th {
+    background-color: var(--secondary-color);
+    color: var(--primary-color);
+}
+
+tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+
 @media (max-width: 768px) {
     .cards-container {
         flex-direction: column;
