@@ -11,6 +11,21 @@
 }
 
 
+.card-large {
+    width: auto;
+    height: auto;  
+}
+
+.cards-container {
+    width: 100%;
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: center;   
+}
+
+
 .card__image {
     
     width: 100%;
