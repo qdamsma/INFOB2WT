@@ -40,7 +40,7 @@ body{
 
 
 .linktext{
-    width: 100pxl;
+    width: 100px;
 }
 
 .banner {
@@ -89,6 +89,13 @@ h1{
         margin: 0px;
         padding: 0px;
     }
+    .group-image{
+        display: none
+    }
+    .navigationnav{
+        height: 80px;
+    }
+    
 }
 
 .article-index{
@@ -133,5 +140,6 @@ tr:nth-child(even) {
     .cards-container {
         flex-direction: column;
         align-items: center;
+        gap: 20px;
     }
 }
