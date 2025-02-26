@@ -1,6 +1,7 @@
 @import url(card.css);
 @import url(memberpage.css);
 @import url(video.css);
+@import url(Previews.css);
 
 body{
     margin: 0;
@@ -73,7 +74,12 @@ h1{
     display: flex;
     align-items: center;
     flex-direction: column;
-    gap: 1000px; 
+    
+    z-index: 10;
+}
+
+.article-index > * {
+    margin: 280px;
 }
 
 table {
