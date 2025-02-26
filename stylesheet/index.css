@@ -43,6 +43,10 @@ body{
     padding-left: 10px;
 }
 
+.headercolor{
+    color: var(--secondary-color);
+    
+}
 
 .linktext{
     width: 100px;
