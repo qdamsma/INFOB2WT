@@ -10,6 +10,9 @@
     text-decoration: none;
 }
 
+a.card:hover{
+    background-color: #248fe7;
+}
 
 .card-large {
     position: relative;
