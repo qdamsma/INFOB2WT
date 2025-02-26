@@ -1,0 +1,38 @@
+
+.card {
+    background-color: #f4f4f4;
+    width: 220px;
+    height: 385px;
+    border: #888;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+}
+
+.card__image {
+    width: 100%;
+    height: auto;
+    border: 1px solid #888;
+    border-radius: 8px;
+}
+
+.card__header {
+    color: var(--secondary-color);
+}
+
+.card__paragraph {
+    font-size: 16px;
+    color: #333;
+}
+
+.card__image--Mem1{
+    background-color: #3715e0;
+}
+
+.card__image--Mem2{
+    background-color: #64cd15;
+}
+
+.card__image--Mem3{
+    background-color: #b51842;
+}
