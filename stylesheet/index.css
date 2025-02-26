@@ -6,6 +6,7 @@ body{
     margin: 0;
     font-family: 'Raleway', sans-serif;
     background-color: gray;
+    padding-top: 60px;
 }
 
 :root {
