@@ -1,8 +1,11 @@
 @import url(card.css);
+@import url(memberpage.css);
+@import url(video.css);
 
 body{
     margin: 0;
     font-family: 'Raleway', sans-serif;
+    background-color: gray;
 }
 
 :root {
@@ -10,6 +13,8 @@ body{
     --secondary-color: #fec300;
     --border-color: #ddd;
 }
+
+
 
 .navigation {
     width: 100%;
@@ -48,7 +53,6 @@ h1{
     margin-right: 30px;
 }
 
-
 .navitem a {
     color: var(--primary-color);
     text-decoration: none;
@@ -64,57 +68,6 @@ h1{
     color: var(--secondary-color);
 }
 
-.video-container {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100vh; 
-    overflow: hidden;
-    z-index: -5;
-}
-
-.video-container video {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-}
-
-.video-container::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(to right, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0));
-    pointer-events: none;
-    z-index: 2;
-}
-
-.video-text {
-    position: absolute;
-    top: 50%;
-    left: 5%;
-    transform: translateY(-50%);
-    color: var(--secondary-color);
-    font-size: 2rem;
-    font-weight: bold;
-    z-index: 10; 
-}
-.video-middle-text{
-    top: 55%;
-    font-size: 21px;
-}
-.video-bottom-text {
-    top: 60%;
-    font-size: 19px;
-
-}
 
 .article-index{
     display: flex;
