@@ -10,6 +10,9 @@
     text-decoration: none;
 }
 
+a.card:hover{
+    background-color: #248fe7;
+}
 
 .card-large {
     width: auto;
@@ -24,7 +27,6 @@
     justify-content: space-evenly;
     align-items: center;   
 }
-
 
 .card__image {
     
