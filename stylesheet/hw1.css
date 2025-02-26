@@ -1,0 +1,89 @@
+
+.hw-h1{
+    text-align: center;
+}
+
+.hw-h2{
+    font-family: inherit;
+    text-shadow: none;
+    letter-spacing: normal;
+    font-size: small;
+    margin: 1.0em 0.0px;
+    padding: 0.0px;
+    border: 0.0px;
+    outline: 0.0px;
+    font-weight: bold;
+    font-style: inherit;
+}
+.hw-h3{
+    font-family: inherit;
+    text-shadow: none;
+    letter-spacing: normal;
+    font-size: small;
+    margin: 1.0em 0.0px;
+    padding: 0.0px;
+    border: 0.0px;
+    outline: 0.0px;
+    font-weight: bold;
+    font-style: inherit;
+}
+.hw-text{
+    width: 1024.0px;
+    font-size: small;
+}
+.hw-ul1{
+    font-family: inherit;
+    text-shadow: none;
+    letter-spacing: normal;
+    margin: 1.0em 0.0px;
+    padding: 0.0px 0.0px 0.0px 40.0px;
+    border: 0.0px;
+    outline: 0.0px;
+    font-weight: inherit;
+    font-style: inherit;
+    font-size: small;
+    list-style: outside;
+}
+.hw-ul2{
+    font-family: inherit;
+    text-shadow: none;
+    letter-spacing: normal;
+    margin: 0.0px;
+    padding: 0.0px 0.0px 0.0px 40.0px;
+    border: 0.0px;
+    outline: 0.0px;
+    font-weight: inherit;
+    font-style: inherit;
+    font-size: small;
+    list-style: outside;
+}
+.hw-li1{
+    font-family: inherit;
+    text-shadow: none;
+    letter-spacing: normal;
+    margin: 0.0px;
+    padding: 0.0px;
+    border: 0.0px;
+    outline: 0.0px;
+    font-weight: inherit;
+    font-style: inherit;
+    font-size: small;
+    display: list-item;
+    list-style-position: outside;
+    list-style-type: inherit;
+}
+.hw-li2{
+    font-family: inherit;
+    text-shadow: none;
+    letter-spacing: normal;
+    margin: 0.0px;
+    padding: 0.0px;
+    border: 0.0px;
+    outline: 0.0px;
+    font-weight: inherit;
+    font-style: inherit;
+    font-size: small;
+    display: list-item;
+    list-style-position: outside;
+    list-style-type: circle;
+}
