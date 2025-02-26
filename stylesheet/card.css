@@ -10,10 +10,14 @@
     text-decoration: none;
 }
 
+.card-large {
+    width: auto;
+    height: auto;  
+}
+
 .cards-container {
     width: 100%;
-    position: absolute;
-    top: 15%;
+    position: relative;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-evenly;

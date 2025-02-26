@@ -6,7 +6,7 @@ body{
     margin: 0;
     font-family: 'Raleway', sans-serif;
     background-color: gray;
-    padding-top: 60px;
+    padding-top: 80px;
 }
 
 :root {
@@ -75,17 +75,6 @@ h1{
     align-items: center;
     flex-direction: column;
     gap: 1000px; 
-}
-
-.cards-container {
-    width: 100%;
-    position: absolute;
-    top: 15%;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-evenly;
-    align-items: center;
-   
 }
 
 table {
