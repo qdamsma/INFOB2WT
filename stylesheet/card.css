@@ -16,7 +16,7 @@ a.card:hover{
 
 .card-large {
     position: relative;
-    width: 30%;
+    width: fit-content;
     height: auto;  
     margin: auto;
 }
