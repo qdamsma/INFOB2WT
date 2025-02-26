@@ -21,8 +21,9 @@
     padding: 20px;
 }
 
-.about-textbox__para{
-    /* add styling to the text */
+.about-textbox__para,
+.about-textbox__head,
+.about-textbox__list {
     animation: fade-in 1.5s forwards;
     opacity: 0;
 }
@@ -39,11 +40,19 @@
     animation-delay: 0.75s;
 }
 
+.about-textbox__head:nth-child(3){
+    animation-delay: 0.75s;
+}
+
 .about-textbox__para:nth-child(4){
     animation-delay: 1s;
 }
 
 .about-textbox__para:nth-child(5){
+    animation-delay: 1.25s;
+}
+
+.about-textbox__head:nth-child(5){
     animation-delay: 1.25s;
 }
 
@@ -55,9 +64,14 @@
     animation-delay: 1.75s;
 }
 
+.about-textbox__list:nth-child(7){
+    animation-delay: 1.75s;
+}
+
 .about-textbox__para:nth-child(8){
     animation-delay: 2s;
 }
+
 
 @keyframes fade-in {
     0% {
