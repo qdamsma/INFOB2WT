@@ -15,8 +15,10 @@ a.card:hover{
 }
 
 .card-large {
-    width: auto;
+    position: relative;
+    width: 30%;
     height: auto;  
+    margin: auto;
 }
 
 .cards-container {
@@ -55,15 +57,4 @@ a.card:hover{
 
 .card__image--Mem3{
     background-color: #b51842;
-}
-
-
-.cards-container {
-    width: 100%;
-    position: absolute;
-    top: 15%;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-evenly;
-    align-items: center;   
 }
