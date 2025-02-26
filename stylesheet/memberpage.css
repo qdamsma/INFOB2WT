@@ -1,0 +1,22 @@
+.memberpage-content {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.memberpage-content > *{
+    margin: 150px;
+}
+
+.about-textbox{
+    width: 800px;
+    height: 600px;
+    margin: 100px;
+    border: 5px solid #713838;
+    background-color: #f4f4f4;
+    border-radius: 16px;
+}
+
