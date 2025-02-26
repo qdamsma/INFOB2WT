@@ -12,8 +12,10 @@
 
 
 .card-large {
-    width: auto;
+    position: relative;
+    width: 30%;
     height: auto;  
+    margin: auto;
 }
 
 .cards-container {
@@ -24,7 +26,6 @@
     justify-content: space-evenly;
     align-items: center;   
 }
-
 
 .card__image {
     
