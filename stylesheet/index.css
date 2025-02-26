@@ -27,6 +27,9 @@ body{
     top: 0;
     left: 0;
     z-index: 1000;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
 }
 
 .navigationnav {
@@ -36,6 +39,8 @@ body{
     list-style-type: none;
     padding: 0;
     margin: 0;
+    height: 80px;
+    padding-left: 10px;
 }
 
 
@@ -46,6 +51,7 @@ body{
 .banner {
     width: 80px;
     height: auto;
+    padding-right: 10px;
 }
 
 h1{
@@ -91,10 +97,6 @@ h1{
     }
     .group-image{
         display: none
-    }
-    .navigationnav{
-        height: 80px;
-        padding-left: 10px;
     }
     
 }
