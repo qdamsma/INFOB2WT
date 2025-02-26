@@ -94,6 +94,7 @@ h1{
     }
     .navigationnav{
         height: 80px;
+        padding-left: 10px;
     }
     
 }
