@@ -83,3 +83,16 @@
         transform: translateY(0px) scale(1);
     }
 }
+
+@media (max-width: 1100px) {
+    .memberpage-content {
+        flex-direction: column;
+    }
+
+    .about-textbox {
+        width: 80vw;
+        height: auto;
+        margin: 0px;
+    }
+    
+}
