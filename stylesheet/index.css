@@ -63,7 +63,14 @@ h1{
     font-size: 50px;
 }
 
-
+.menu-toggle {
+    display: none; 
+    font-size: 30px;
+    background: none;
+    border: none;
+    color: var(--primary-color);
+    cursor: pointer;
+}
 
 .navitem {
     margin-right: 30px;
@@ -101,10 +108,44 @@ h1{
         margin: 0px;
         padding: 0px;
     }
-    .group-image{
-        display: none
-    }
     
+}
+
+@media (max-width: 600px) {
+    .menu-toggle {
+        display: block;
+        position: absolute;
+        top: 15px;
+        right: 15px;
+    }
+
+    .navigationnav {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 75px;
+        right: 0;
+        width: 45%;
+        background-color: #4848488c;
+        text-align: center;
+        gap: 5px;
+        padding-left: 0px;
+    }
+
+
+    .navigationnav.show {
+        display: flex;
+        height: 175px;
+    }
+    .navitem{
+        width: 100px;
+        padding: 10px;
+        border-top: #ddd;
+        border-bottom: #ddd;
+        border-top-style: dashed;
+        border-bottom-style: dashed;
+        margin-right: 0px;
+    }
 }
 
 .article-index{
