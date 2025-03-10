@@ -60,12 +60,12 @@ body{
 
 h1{
     color: var(--secondary-color);
-    font-size: 50px;
+    font-size: 3rem;
 }
 
 .menu-toggle {
     display: none; 
-    font-size: 30px;
+    font-size: 2rem;
     background: none;
     border: none;
     color: var(--primary-color);
@@ -79,7 +79,7 @@ h1{
 .navitem a {
     color: var(--primary-color);
     text-decoration: none;
-    font-size: 23px;
+    font-size: 1.5rem;
     font-weight: bold;
     transition: color 0.3s ease;
 }
@@ -93,7 +93,7 @@ h1{
 
 .menu-toggle {
     display: none; 
-    font-size: 30px;
+    font-size: 2rem;
     background: none;
     border: none;
     color: var(--primary-color);

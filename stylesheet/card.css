@@ -16,7 +16,9 @@ a.card:hover{
 
 .card-large {
     position: relative;
+    max-width: 90%;
     width: fit-content;
+    padding: 20px;
     height: auto;  
     margin: auto;
 }
@@ -43,7 +45,7 @@ a.card:hover{
 }
 
 .card__paragraph {
-    font-size: 16px;
+    font-size: 1rem;
     color: #333;
 }
 
