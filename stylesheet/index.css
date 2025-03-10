@@ -21,7 +21,7 @@ body{
 
 
 .navigation {
-    width: 100%;
+    width: 100vw;
     background-color: #4848488c;
     position: fixed;
     top: 0;
@@ -135,7 +135,7 @@ h1{
 
     .navigationnav.show {
         display: flex;
-        height: 175px;
+        height: 200px;
     }
     .navitem{
         width: 100px;
@@ -185,6 +185,14 @@ tr:nth-child(even) {
     background-color: #f9f9f9;
 }
 
+@media (max-width: 600px) {
+    table {
+        width: 100%;
+        display: block;
+        overflow-x: auto;
+        white-space: nowrap;
+    }
+}
 
 @media (max-width: 768px) {
     .cards-container {
