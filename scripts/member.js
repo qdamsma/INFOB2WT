@@ -59,6 +59,7 @@ function displayStudent(student) {
     // Maakt een card aan en voegt de card klasse toe voor dezelfde css
     const card = document.createElement('a');
     card.classList.add('card');
+    card.href = "member.html";
 
     // Maakt image element aan met alt, src en klassen
     const img = document.createElement('img');
