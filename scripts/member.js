@@ -48,28 +48,35 @@ document.getElementById('fileInput').addEventListener('change', function (event)
     reader.readAsText(file);
 });
 
+// Functie om de data te displayen
 function displayStudent(student) {
     const mainContainer = document.getElementById('mainContent');
 
+    // Maakt de section om cards te displayen
     const cardsection = document.createElement('section');
     cardsection.classList.add('cards-container');
 
+    // Maakt een card aan en voegt de card klasse toe voor dezelfde css
     const card = document.createElement('a');
     card.classList.add('card');
 
+    // Maakt image element aan met alt, src en klassen
     const img = document.createElement('img');
     img.src = student.photo;
     img.alt = student.firstName;
     img.classList.add("card__image", "card__image--Mem1");
-
+    
+    // Maakt header aan voor de namen met klasse
     const name = document.createElement('h2');
     name.textContent = student.firstName;
     name.classList.add("card__header");
-
+    
+    // Maakt de beschrijving aan
     const intro = document.createElement('p');
     intro.textContent = student.intro;
     intro.classList.add("card__paragraph")
 
+    // Voegt image naam en beschrijving toe aan de card, wordt vervolgens toegevoed aan de cardselection en deze wordt weergegeven op de pagina
     cardsection.append(card);
     card.append(img, name, intro);
     mainContainer.appendChild(cardsection);
