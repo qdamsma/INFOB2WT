@@ -1,0 +1,15 @@
+{
+    "Header1": "Universiteit Utrecht",
+    "Header2": "Course: webtechnologie",
+    "Header3": "Groep 19",
+    "Header4": "About Page",
+    "imagesrc1": "../images/aboutimg1.png",
+    "imagealt1": "About Page Example Image 1",
+    "imagesrc2": "../images/aboutimg2.png",
+    "imagealt2": "About Page Example Image 2",
+    "Header5": "Project Page",
+    "imagesrc3": "../images/projectimg1.png",
+    "imagealt3": "Project Page Example Image 1",
+    "imagesrc4": "../images/projectimg2.png",
+    "imagealt4": "Project Page Example Image 2"
+}
