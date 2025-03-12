@@ -1,13 +1,34 @@
 {
-    "name": "Quinten",
+    "firstName": "Quinten",
+    "lastName": "Damsma",
+    "age": 20,
+    "hobbies": ["Formule 1", "Padel", "Lezen", "Hardlopen"],
+    "email": "q.damsma@students.uu.nl",
+    "photo": "../images/icon.png",
+    "major": "Informatica",
+    "courses": [
+        {
+            "title": "Web Development",
+            "teacher": {
+                "firstName": "Jan",
+                "lastName": "Peters"
+            },
+            "description": "Leer de basis van HTML, CSS en JavaScript."
+        },
+        {
+            "title": "Databases",
+            "teacher": {
+                "firstName": "Lisa",
+                "lastName": "Bakker"
+            },
+            "description": "Inleiding tot relationele databases en SQL."
+        }
+    ],
     "introduction": "Mijn naam is Quinten, ik ben een 4e jaars HBO student bezig met mijn minor hier op de Universiteit Utrecht.",
     "texts1": ["Op dit moment studeer ik op de Hogeschool Leiden waar ik de opleiding informatica doe met specialisatie richting interactie technologie. Uit deze specialisatie heb ik al veel meegekregen over front-end en back-end development.",
                 "Ik heb er voor gekozen om een minor aan de Universiteit Utrecht te doen omdat ik mijn kennis wilde verbreden op universitair niveau en een stukje diepte miste op de hogeschool. Hier op de Universiteit probeer ik mijn vaardigheden aan te scherpen en te  verbeteren op de zwakke punten."],
     "head1": "Over mij",
     "texts2": "Ik zou mijzelf omschrijven als een enthousiaste leerling die het leuk vind om nieuwe onderwerpen te leren. Ik heb dit vakgebied gekozen omdat ik hier non stop nieuwe dingen blijf leren ookal had ik nog weinig geprogrammeerd voordat ik begon aan mijn opleiding.",
     "head2": "Hobby's",
-    "texts3": "In mijn vrije tijd hou ik me graag bezig met verschillende activiteiten, zoals:",
-    "list1": ["Formule 1", "Padel", "Lezen", "Hardlopen"],
-    "imagesrc": "../images/icon.png",
-    "imagealt": "Member Icon"
+    "texts3": "In mijn vrije tijd hou ik me graag bezig met verschillende activiteiten, zoals:"
 }
