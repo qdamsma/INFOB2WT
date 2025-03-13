@@ -10,25 +10,25 @@
         {
             "title": "Web Development",
             "teacher": {
-                "firstName": "Jan",
-                "lastName": "Peters"
+                "firstName": "Sergey",
+                "lastName": "Sosnovsky"
             },
-            "description": "Leer de basis van HTML, CSS en JavaScript."
+            "description": "Het uitgangspunt van dit vak is het http protocol en alles wat daar bovenop gebouwd kan worden. Daarbij wordt ervaring opgedaan met relevante talen en technologieen, zoals (X)HTML, CSS, JavaScript, PHP en frameworks. Daarnaast wordt ingegaan op de historische context van het WWW en worden de concepten achter en allerlei technische aspecten van het WWW toegelicht. Ook dient de deelnemer zich het bijbehorende jargon eigen te maken."
         },
         {
             "title": "Databases",
             "teacher": {
-                "firstName": "Lisa",
-                "lastName": "Bakker"
+                "firstName": "Hans",
+                "lastName": "Philippi"
             },
-            "description": "Inleiding tot relationele databases en SQL."
+            "description": "Bedrijfsprocessen draaien vooral om informatieverwerking. Deze informatie moet worden bijgehouden, daar zijn database management systemen (DBMS) voor. De verschillen met eenvoudige file-systemen zijn legio. Zo zijn er query-talen om makkelijk informatie terug te vinden, transactie-systemen om te zorgen dat veel gebruikers tegelijk de informatie kunnen raadplegen en veranderen, en schema-informatie om te weten wat de data eigenlijk betekent. In dit vak wordt de basis van relationele databases behandeld, waarbij de nadruk op ontwerpen en vraagtalen ligt. Daarnaast wordt gekeken naar de interne werking van een databasesysteem: hoe worden transacties verwerkt, hoe wordt een query geoptimaliseerd en uitgevoerd. Tenslotte besteden we aandacht aan enkele recente ontwikkelingen, zoals NoSQL databases."
         }
     ],
     "introduction": "Mijn naam is Quinten, ik ben een 4e jaars HBO student bezig met mijn minor hier op de Universiteit Utrecht.",
-    "texts1": ["Op dit moment studeer ik op de Hogeschool Leiden waar ik de opleiding informatica doe met specialisatie richting interactie technologie. Uit deze specialisatie heb ik al veel meegekregen over front-end en back-end development.",
-                "Ik heb er voor gekozen om een minor aan de Universiteit Utrecht te doen omdat ik mijn kennis wilde verbreden op universitair niveau en een stukje diepte miste op de hogeschool. Hier op de Universiteit probeer ik mijn vaardigheden aan te scherpen en te  verbeteren op de zwakke punten."],
     "head1": "Over mij",
+    "texts1": "Op dit moment studeer ik op de Hogeschool Leiden waar ik de opleiding informatica doe met specialisatie richting interactie technologie. Uit deze specialisatie heb ik al veel meegekregen over front-end en back-end development. Ik heb er voor gekozen om een minor aan de Universiteit Utrecht te doen omdat ik mijn kennis wilde verbreden op universitair niveau en een stukje diepte miste op de hogeschool. Hier op de Universiteit probeer ik mijn vaardigheden aan te scherpen en te  verbeteren op de zwakke punten.",
+    "head2": "Waarom Informatica?",
     "texts2": "Ik zou mijzelf omschrijven als een enthousiaste leerling die het leuk vind om nieuwe onderwerpen te leren. Ik heb dit vakgebied gekozen omdat ik hier non stop nieuwe dingen blijf leren ookal had ik nog weinig geprogrammeerd voordat ik begon aan mijn opleiding.",
-    "head2": "Hobby's",
+    "head3": "Hobby's",
     "texts3": "In mijn vrije tijd hou ik me graag bezig met verschillende activiteiten, zoals:"
 }

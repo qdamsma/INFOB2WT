@@ -1,0 +1,25 @@
+{
+    "firstName": "André",
+    "lastName": "-",
+    "age": null,
+    "hobbies": [],
+    "email": "-",
+    "photo": "../images/icon.png",
+    "major": "Informatica",
+    "courses": [
+        {
+            "title": "Web Development",
+            "teacher": {
+                "firstName": "Sergey",
+                "lastName": "Sosnovsky"
+            },
+            "description": "Het uitgangspunt van dit vak is het http protocol en alles wat daar bovenop gebouwd kan worden. Daarbij wordt ervaring opgedaan met relevante talen en technologieen, zoals (X)HTML, CSS, JavaScript, PHP en frameworks. Daarnaast wordt ingegaan op de historische context van het WWW en worden de concepten achter en allerlei technische aspecten van het WWW toegelicht. Ook dient de deelnemer zich het bijbehorende jargon eigen te maken."
+        }
+    ],
+    "introduction": "Mijn naam is André, ik ben een 1e jaars Informatic bacholerstudent bij Universiteit Utrecht.",
+    "head1": "Over School",
+    "texts1": "Ik zit in mijn 1e jaar van Informatica bij de Universiteit Utrecht, ik heb dit eerste jaar nog niet veel keuze kwa vakken, maar het is mijn doel om in de loop van mijn 3-4 jaar studie alle vakken die van de paden Kunstmatige intelligentie, algorithmen en data, en software technologie te volgen, en zo nodig mijn studiepunten af te ronden met vakken van het pad Gametechnologie. Ik ben dus niet van plan een minor te doen in een vak buiten Informatica. Ik heb gekozen om deze opleiding te volgen vanwege meerdere redenen. Om te beginnen is programmeren het type werk dat van huis gedaan kan worden en dat waardeer ik. Het is ook mijn hoop dat ik in de toekomst kan freelancen of iets dergelijks. Binnen dit vakgebied beschouw ik dat niet helemaal onrealistisch. Ten tweede verdient het goed, en het is redelijk creatief. Ik vindt het best goed voelen om na een lange tijd vast te zitten een Eurake momentje te hebben en dan een redelijk mooi product op dat digitale scherm van mij te zien verschijnen. Daarnaast is het naar mijn ervaring iets wat iederaan kan leren, het enige wat je nodig hebt een wat tijd en doorzettingsvermogen. De kern van het hele vak is het oplossen van de problemen waar je onvermijdelijk tegenaan gaat lopen. Zolang je dat lang genoeg volhoud kan iedereen dit. Het is dus heel toegankelijk.",
+    "head2": "Over mij",
+    "texts2": "Ik ben vrij \"layed-back\", in de meeste dingen. Wat ik vooral waardeer is rust en ik ben vooral geninterreseerd in dingen die me goed laten voelen, zoals slaap en gezond eten. Voor school, doe ik altijd mijn best om mijn taken tot een zekere standaard te voltooien. Dat gezegd hebbende, wat goed is is goed en ik draag mezelf niet graag extra werk op. Ik heb niet echt hobbies in het bijzonder, ik expirenteer hier en daar met wat programmeren en ik probeer mijn tijd in het algemeen gewoon productief te besteden met verschillende kleine dingen."
+}
+

@@ -1,5 +1,21 @@
 {
-    "name": "Ian",
+    "firstName": "Ian",
+    "lastName": "-",
+    "age": null,
+    "hobbies": ["Gamen","bordspellen spelen","Rugby","Boulderen","Fitness"],
+    "email": "-",
+    "photo": "../images/icon.png",
+    "major": "Informatica",
+    "courses": [
+        {
+            "title": "Web Development",
+            "teacher": {
+                "firstName": "Sergey",
+                "lastName": "Sosnovsky"
+            },
+            "description": "Het uitgangspunt van dit vak is het http protocol en alles wat daar bovenop gebouwd kan worden. Daarbij wordt ervaring opgedaan met relevante talen en technologieen, zoals (X)HTML, CSS, JavaScript, PHP en frameworks. Daarnaast wordt ingegaan op de historische context van het WWW en worden de concepten achter en allerlei technische aspecten van het WWW toegelicht. Ook dient de deelnemer zich het bijbehorende jargon eigen te maken."
+        }
+    ],
     "introduction": "Hallo, mijn naam is Ian. Ik ben een bachelorstudent Informatica aan Universiteit Utrecht en volg het pad Gametechnologie.",
     "head1": "Opleiding",
     "texts1": "Aan de Universiteit Utrecht volg ik mijn bachelor opleiding Informatica, met Gametechnologie als focus. Het idee was om later in de game industrie te gaan werken. Maar nadat ik meer geleerd heb over de nadelen, is dat niet meer het uiteindelijke plan. ",
@@ -8,8 +24,5 @@
     "head3": "Gamer",
     "texts3": "Ook al ben ik niet meer van plan de game industrie in te gaan, ben en blijf ik in de kern een gamer. Of dit spellen zijn voor op de pc of console, bordspellen, of fysieke spellen (ook wel sport), ik vind het allemaal leuk.",
     "head4": "Hobby's",
-    "texts4": "Mijn hobby's zijn dan ook vooral spel gerelateerd.",
-    "list1": ["Gamen","bordspellen spelen","Rugby","Boulderen","Fitness"],
-    "imagesrc": "../images/icon.png",
-    "imagealt": "Member Icon"
+    "texts4": "Mijn hobby's zijn dan ook vooral spel gerelateerd."
 }
