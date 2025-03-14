@@ -14,7 +14,7 @@ class Person {
     }
 
     set firstName(value) {
-        if (typeof fiirstName !== 'string' || !/^[A-Za-z\u00C0-\u017F\s-]+$/.test(value)) {
+        if (typeof value !== 'string' || !/^[A-Za-z\u00C0-\u017F\s-]+$/.test(value)) {
             throw new Error("Ongeldige Voornaam");
         }
         this.#firstName = value;
@@ -25,7 +25,7 @@ class Person {
     }
 
     set lastName(value) {
-        if (typeof lastName !== 'string' || !/^[A-Za-z\u00C0-\u017F\s]+$/.test(value)) {
+        if (typeof value !== 'string' || !/^[A-Za-z\u00C0-\u017F\s]+$/.test(value)) {
             throw new Error("Ongeldige achternaam");
         }
         this.#lastName = value;
@@ -49,7 +49,7 @@ class Course {
     }
 
     set title(value) {
-        if (typeof title !== 'string' || !/^[A-Za-z\u00C0-\u017F\s-]+$/.test(value)) {
+        if (typeof value !== 'string' || !/^[A-Za-z\u00C0-\u017F\s-]+$/.test(value)) {
             throw new Error("Ongeldige Titel");
         }
         this.#title = value;
@@ -60,7 +60,7 @@ class Course {
     }
 
     set teacher(value) {
-        if (typeof teacher !== 'string' || !/^[A-Za-z\u00C0-\u017F\s-]+$/.test(value)) {
+        if (typeof value !== 'string' || !/^[A-Za-z\u00C0-\u017F\s-]+$/.test(value)) {
             throw new Error("Ongeldige Teacher (naam)");
         }
         this.#teacher = value;
@@ -71,7 +71,7 @@ class Course {
     }
 
     set description(value) {
-        if (typeof description !== 'string' || !/^[A-Za-z\u00C0-\u017F\s-]+$/.test(value)) {
+        if (typeof value !== 'string' || !/^[A-Za-z\u00C0-\u017F\s-]+$/.test(value)) {
             throw new Error("Ongeldige Beschrijving");
         }
         this.#description = value;
@@ -123,7 +123,7 @@ class Student extends Person {
     }
 
     set age(value) {
-        if (typeof age !== 'number' || age < 0 || age > 120) {
+        if (typeof value !== 'number' || age < 0 || age > 120) {
             throw new Error("Ongeldige Leeftijd");
         }
         this.#age = value;
@@ -134,7 +134,7 @@ class Student extends Person {
     }
 
     set hobbies(value) {
-        if (!Array.isArray(hobbies)) {
+        if (!Array.isArray(value)) {
             throw new Error("Hobbies moet een array zijn")
         }
         this.#hobbies = value;
@@ -145,7 +145,7 @@ class Student extends Person {
     }
 
     set email(value) {
-        if (typeof email !== 'string' || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(value)) {
+        if (typeof value !== 'string' || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(value)) {
             throw new Error("Ongeldige Email");
         }
         this.#email = value;       
@@ -156,7 +156,7 @@ class Student extends Person {
     }
 
     set photo(value) {
-        if (typeof photo !== 'string' || !/^(http(s?):)([/|.|\w|\s|-])*\.(?:jpg|gif|png)$/.test(photo)) {
+        if (typeof value !== 'string' || !/^(http(s?):)([/|.|\w|\s|-])*\.(?:jpg|gif|png)$/.test(photo)) {
             throw new Error("Ongeldige Foto");
         }
         this.#photo = value;
@@ -167,7 +167,7 @@ class Student extends Person {
     }
 
     set major(value) {
-        if (typeof major !== 'string' || !/^[A-Za-z\u00C0-\u017F\s-]+$/.test(value)) {
+        if (typeof value !== 'string' || !/^[A-Za-z\u00C0-\u017F\s-]+$/.test(value)) {
             throw new Error("Ongeldige Major");
         }
         this.#major = value;
@@ -178,11 +178,11 @@ class Student extends Person {
     }
 
     set courses(value) {
-        if (!Array.isArray(courses)) {
+        if (!Array.isArray(value)) {
             throw new Error("Course moet een array zijn");
         }
     
-        if (!courses.every(course => course instanceof Course)) {
+        if (!courses.every(value => value instanceof Course)) {
             throw new Error("Alle courses moet van de course class zijn");
         }
         this.#courses = value;
@@ -193,7 +193,7 @@ class Student extends Person {
     }
 
     set intro(value) {
-        if (typeof intro !== 'string' || !/^[A-Za-z\u00C0-\u017F\s-]+$/.test(value)) {
+        if (typeof value !== 'string' || !/^[A-Za-z\u00C0-\u017F\s-]+$/.test(value)) {
             throw new Error("Ongeldige Intro");
         }
         this.#intro = value;
@@ -204,7 +204,7 @@ class Student extends Person {
     }
 
     set head1(value) {
-        if (typeof head1 !== 'string' || !/^[A-Za-z\u00C0-\u017F\s-]+$/.test(value)) {
+        if (typeof value !== 'string' || !/^[A-Za-z\u00C0-\u017F\s-]+$/.test(value)) {
             throw new Error("Ongeldige Header");
         }
         this.#head1 = value;
@@ -215,7 +215,7 @@ class Student extends Person {
     }
 
     set texts1(value) {
-        if (typeof texts1 !== 'string' || !/^[A-Za-z\u00C0-\u017F\s-]+$/.test(value)) {
+        if (typeof value !== 'string' || !/^[A-Za-z\u00C0-\u017F\s-]+$/.test(value)) {
             throw new Error("Ongeldige Text");
         }
         this.#texts1 = value;
@@ -226,7 +226,7 @@ class Student extends Person {
     }
 
     set head2(value) {
-        if (typeof head2 !== 'string' || !/^[A-Za-z\u00C0-\u017F\s-]+$/.test(value)) {
+        if (typeof value !== 'string' || !/^[A-Za-z\u00C0-\u017F\s-]+$/.test(value)) {
             throw new Error("Ongeldige Header");
         }
         this.#head2 = value;
@@ -237,7 +237,7 @@ class Student extends Person {
     }
 
     set texts2(value) {
-        if (typeof texts2 !== 'string' || !/^[A-Za-z\u00C0-\u017F\s-]+$/.test(value)) {
+        if (typeof value !== 'string' || !/^[A-Za-z\u00C0-\u017F\s-]+$/.test(value)) {
             throw new Error("Ongeldige Text");
         }
         this.#texts2 = value;
@@ -248,7 +248,7 @@ class Student extends Person {
     }
 
     set head3(value) {
-        if (typeof head3 !== 'string' || !/^[A-Za-z\u00C0-\u017F\s-]+$/.test(value)) {
+        if (typeof value !== 'string' || !/^[A-Za-z\u00C0-\u017F\s-]+$/.test(value)) {
             throw new Error("Ongeldige Header");
         }
         this.#head3 = value;
@@ -259,7 +259,7 @@ class Student extends Person {
     }
 
     set texts3(value) {
-        if (typeof texts3 !== 'string' || !/^[A-Za-z\u00C0-\u017F\s-]+$/.test(value)) {
+        if (typeof value !== 'string' || !/^[A-Za-z\u00C0-\u017F\s-]+$/.test(value)) {
             throw new Error("Ongeldige Text");
         }
         this.#texts3 = value;
@@ -270,7 +270,7 @@ class Student extends Person {
     }
 
     set head4(value) {
-        if (typeof head4 !== 'string' || !/^[A-Za-z\u00C0-\u017F\s-]+$/.test(value)) {
+        if (typeof value !== 'string' || !/^[A-Za-z\u00C0-\u017F\s-]+$/.test(value)) {
             throw new Error("Ongeldige Header");
         }
         this.#head4 = value;
@@ -281,7 +281,7 @@ class Student extends Person {
     }
 
     set texts4(value) {
-        if (typeof texts4 !== 'string' || !/^[A-Za-z\u00C0-\u017F\s-]+$/.test(value)) {
+        if (typeof value !== 'string' || !/^[A-Za-z\u00C0-\u017F\s-]+$/.test(value)) {
             throw new Error("Ongeldige Text");
         }
         this.#texts4 = value;
@@ -292,7 +292,7 @@ class Student extends Person {
     }
 
     set headVak(value){
-        if (typeof this.#headVak !== 'string' || !/^[A-Za-z\u00C0-\u017F\s-]+$/.test(value)) {
+        if (typeof this.value !== 'string' || !/^[A-Za-z\u00C0-\u017F\s-]+$/.test(value)) {
             throw new Error("Ongeldige Text");
         }
         this.#headVak = value;
