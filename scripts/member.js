@@ -13,8 +13,6 @@ class Person {
         return this.#firstName;
     }
 
-    
-
     set firstName(value) {
         if (typeof email !== 'string' || !/^[A-Za-z\u00C0-\u017F\s-]+$/.test(value)) {
             throw new Error("Ongeldige Voornaam");
@@ -98,7 +96,8 @@ class Student extends Person {
     #head4;
     #texts4;
 
-    constructor(firstName, lastName, age, hobbies, email, photo, major, courses, intro, head1, texts1, head2, texts2, head3, texts3, head4, texts4) {
+    constructor(firstName, lastName, age, hobbies, email, photo, major, courses, intro, head1, texts1, head2, texts2, head3, texts3, head4, texts4, headVak) {
+
         super(firstName, lastName);
         this.age = age;
         this.hobbies = hobbies;
@@ -115,6 +114,7 @@ class Student extends Person {
         this.texts3 = texts3;
         this.head4 = head4;
         this.texts4 = texts4;
+        this.headVak = headVak;
     }
     
     get age() {
@@ -300,7 +300,7 @@ if (fileInput) {
             const data = JSON.parse(e.target.result);
             const student = new Student(
                 data.firstName, data.lastName, data.age, data.hobbies, data.email, data.photo, data.major,
-                data.courses, data.introduction, data.head1, data.texts1, data.head2, data.texts2, data.head3, data.texts3, data.head4, data.texts4
+                data.courses, data.introduction, data.head1, data.texts1, data.head2, data.texts2, data.head3, data.texts3, data.head4, data.texts4, data.headVak
             );
             displayStudent(student);
         };
@@ -354,7 +354,7 @@ document.addEventListener('DOMContentLoaded', function () {
         const data = JSON.parse(studentData);
         const student = new Student(
             data.firstName, data.lastName, data.age, data.hobbies, data.email, data.photo, data.major,
-            data.courses, data.intro, data.head1, data.texts1, data.head2, data.texts2, data.head3, data.texts3, data.head4, data.texts4
+            data.courses, data.intro, data.head1, data.texts1, data.head2, data.texts2, data.head3, data.texts3, data.head4, data.texts4, data.headVak
         );
         showStudentDetails(student);
     } else {
@@ -437,8 +437,32 @@ function showStudentDetails(student) {
         listItem.textContent = hobby;
         hobbyList.appendChild(listItem);
     });
+    
+    const courseList = document.createElement('ul');
+    courseList.classList.add("course-list");
+
+
+    student.courses.forEach(course => {
+        const courseItem = document.createElement('li');
+        courseItem.classList.add("course-item");
+        courseItem.textContent = course.title;
+
+        const tooltip = document.createElement('section');
+        tooltip.classList.add("tooltip")
+        tooltip.textContent = course.description;
+        
+        courseItem.appendChild(tooltip);
+        courseList.appendChild(courseItem);
+    });
 
     about.appendChild(hobbyList);
+
+    const headVak = document.createElement('h3');
+    headVak.textContent = student.headVak;
+    headVak.classList.add("about-textbox__head");
+
+    about.appendChild(headVak);
+    about.appendChild(courseList);
 
     content.appendChild(card);
     content.appendChild(about);
