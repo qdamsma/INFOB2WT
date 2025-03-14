@@ -1,7 +1,7 @@
 {
     "firstName": "André",
     "lastName": "-",
-    "age": null,
+    "age": 20,
     "hobbies": [],
     "email": "-",
     "photo": "../images/icon.png",

@@ -1,7 +1,7 @@
 {
     "firstName": "Ian",
     "lastName": "-",
-    "age": null,
+    "age": 20,
     "hobbies": ["Gamen","bordspellen spelen","Rugby","Boulderen","Fitness"],
     "email": "-",
     "photo": "../images/icon.png",

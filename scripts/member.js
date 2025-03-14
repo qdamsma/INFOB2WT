@@ -149,7 +149,7 @@ class Student extends Person {
     }
 
     set email(value) {
-        if (typeof value !== 'string' || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(value)) {
+        if (typeof value !== 'string') {
             throw new Error("Ongeldige Email");
         }
         this.#email = value;       
@@ -252,9 +252,6 @@ class Student extends Person {
     }
 
     set head3(value) {
-        if (typeof value !== 'string') {
-            throw new Error("Ongeldige Header");
-        }
         this.#head3 = value;
     }
 
@@ -263,9 +260,6 @@ class Student extends Person {
     }
 
     set texts3(value) {
-        if (typeof value !== 'string') {
-            throw new Error("Ongeldige Text");
-        }
         this.#texts3 = value;
     }
 
