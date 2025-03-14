@@ -60,3 +60,10 @@ a.card:hover{
 .card__image--Mem3{
     background-color: #b51842;
 }
+
+.center{
+    display: flex;
+    justify-content: center; 
+    align-items: center;    
+    height: 70vh; 
+}
