@@ -1,7 +1,7 @@
 class Person {
 
-    // #firstName;
-    // #lastName;
+    #firstName;
+    #lastName;
 
 
     constructor(firstName, lastName) {
@@ -9,41 +9,95 @@ class Person {
         this.lastName = lastName;
     }
 
-    // get firstName() {
-    //     return this.#firstName;
-    // }
+    get firstName() {
+        return this.#firstName;
+    }
 
-    // //  PROBLEEM: hij pakt é niet in voornamen nu, kan je kijken naar een fix?
+    set firstName(value) {
+        if (typeof email !== 'string' || !/^[A-Za-z\u00C0-\u017F\s-]+$/.test(value)) {
+            throw new Error("Ongeldige Voornaam");
+        }
+        this.#firstName = value;
+    }
 
-    // set firstName(value) {
-    //     if (!/^[A-Za-z\s]+$/.test(value)) {
-    //         throw new Error("Ongeldige Voornaam");
-    //     }
-    //     this.#firstName = value;
-    // }
+    get lastName() {
+        return this.#lastName;
+    }
 
-    // get lastName() {
-    //     return this.#lastName;
-    // }
-
-    // set lastName(value) {
-    //     if (!/^[A-Za-z\s]+$/.test(value)) {
-    //         throw new Error("Ongeldige achternaam");
-    //     }
-    //     this.#lastName = value;
-    // }
+    set lastName(value) {
+        if (typeof email !== 'string' || !/^[A-Za-z\u00C0-\u017F\s]+$/.test(value)) {
+            throw new Error("Ongeldige achternaam");
+        }
+        this.#lastName = value;
+    }
 }
 
 class Course {
+
+    #title;
+    #teacher;
+    #description;
+
     constructor(title, teacher, description) {
         this.title = title;
         this.teacher = new Person(teacher.firstName, teacher.lastName);
         this.description = description;
     }
+
+    get title() {
+        return this.#title;
+    }
+
+    set title(value) {
+        if (typeof email !== 'string' || !/^[A-Za-z\u00C0-\u017F\s-]+$/.test(value)) {
+            throw new Error("Ongeldige Titel");
+        }
+        this.#title = value;
+    }
+
+    get teacher(){
+        return this.#teacher;
+    }
+
+    set teacher(value) {
+        if (typeof email !== 'string' || !/^[A-Za-z\u00C0-\u017F\s-]+$/.test(value)) {
+            throw new Error("Ongeldige Teacher (naam)");
+        }
+        this.#teacher = value;
+    }
+
+    get description() {
+        return this.#description;
+    }
+
+    set description(value) {
+        if (typeof email !== 'string' || !/^[A-Za-z\u00C0-\u017F\s-]+$/.test(value)) {
+            throw new Error("Ongeldige Beschrijving");
+        }
+        this.#description = value;
+    }
 }
 
 class Student extends Person {
+
+    #age;
+    #hobbies;
+    #email;
+    #photo;
+    #major;
+    #courses;
+    #intro;
+    #head1;
+    #texts1;
+    #head2;
+    #texts2;
+    #head3;
+    #texts3;
+    #head4;
+    #texts4;
+
     constructor(firstName, lastName, age, hobbies, email, photo, major, courses, intro, head1, texts1, head2, texts2, head3, texts3, head4, texts4, headVak) {
+
         super(firstName, lastName);
         this.age = age;
         this.hobbies = hobbies;
@@ -62,6 +116,176 @@ class Student extends Person {
         this.texts4 = texts4;
         this.headVak = headVak;
     }
+    
+    get age() {
+        return this.#age;
+    }
+
+    set age(value) {
+        if (typeof age !== 'number' || age < 0 || age > 120) {
+            throw new Error("Ongeldige Leeftijd");
+        }
+        this.#age = value;
+    }
+
+    get hobbies() {
+        return this.#hobbies;
+    }
+
+    set hobbies(value) {
+        if (!Array.isArray(hobbies)) {
+            throw new Error("Hobbies moet een array zijn")
+        }
+        this.#hobbies = value;
+    }
+
+    get email() {
+        return this.#email;
+    }
+
+    set email(value) {
+        if (typeof email !== 'string' || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(value)) {
+            throw new Error("Ongeldige Email");
+        }
+        this.#email = value;       
+    }
+
+    get photo() {
+        return this.#photo;
+    }
+
+    set photo(value) {
+        if (typeof photo !== 'string' || !/^(http(s?):)([/|.|\w|\s|-])*\.(?:jpg|gif|png)$/.test(photo)) {
+            throw new Error("Ongeldige Foto");
+        }
+        this.#photo = value;
+    }
+
+    get major() {
+        return this.#major;
+    }
+
+    set major(value) {
+        if (typeof email !== 'string' || !/^[A-Za-z\u00C0-\u017F\s-]+$/.test(value)) {
+            throw new Error("Ongeldige Major");
+        }
+        this.#major = value;
+    }
+
+    get courses() {
+        return this.#courses;
+    }
+
+    set courses(value) {
+        if (!Array.isArray(courses)) {
+            throw new Error("Course moet een array zijn");
+        }
+    
+        if (!courses.every(course => course instanceof Course)) {
+            throw new Error("Alle courses moet van de course class zijn");
+        }
+        this.#courses = value;
+    }
+
+    get intro() {
+        return this.#intro;
+    }
+
+    set intro(value) {
+        if (typeof email !== 'string' || !/^[A-Za-z\u00C0-\u017F\s-]+$/.test(value)) {
+            throw new Error("Ongeldige Intro");
+        }
+        this.#intro = value;
+    }
+
+    get head1() {
+        return this.#head1;
+    }
+
+    set head1(value) {
+        if (typeof email !== 'string' || !/^[A-Za-z\u00C0-\u017F\s-]+$/.test(value)) {
+            throw new Error("Ongeldige Header");
+        }
+        this.#head1 = value;
+    }
+
+    get texts1() {
+        return this.#texts1;
+    }
+
+    set texts1(value) {
+        if (typeof email !== 'string' || !/^[A-Za-z\u00C0-\u017F\s-]+$/.test(value)) {
+            throw new Error("Ongeldige Text");
+        }
+        this.#texts1 = value;
+    }
+
+    get head2() {
+        return this.#head2;
+    }
+
+    set head2(value) {
+        if (typeof email !== 'string' || !/^[A-Za-z\u00C0-\u017F\s-]+$/.test(value)) {
+            throw new Error("Ongeldige Header");
+        }
+        this.#head2 = value;
+    }
+
+    get texts2() {
+        return this.#texts2;
+    }
+
+    set texts2(value) {
+        if (typeof email !== 'string' || !/^[A-Za-z\u00C0-\u017F\s-]+$/.test(value)) {
+            throw new Error("Ongeldige Text");
+        }
+        this.#texts2 = value;
+    }
+
+    get head3() {
+        return this.#head3;
+    }
+
+    set head3(value) {
+        if (typeof email !== 'string' || !/^[A-Za-z\u00C0-\u017F\s-]+$/.test(value)) {
+            throw new Error("Ongeldige Header");
+        }
+        this.#head3 = value;
+    }
+
+    get texts3() {
+        return this.#texts3;
+    }
+
+    set texts3(value) {
+        if (typeof email !== 'string' || !/^[A-Za-z\u00C0-\u017F\s-]+$/.test(value)) {
+            throw new Error("Ongeldige Text");
+        }
+        this.#texts3 = value;
+    }
+
+    get head4() {
+        return this.#head4;
+    }
+
+    set head4(value) {
+        if (typeof email !== 'string' || !/^[A-Za-z\u00C0-\u017F\s-]+$/.test(value)) {
+            throw new Error("Ongeldige Header");
+        }
+        this.#head4 = value;
+    }
+
+    get texts4() {
+        return this.#texts4;
+    }
+
+    set texts4(value) {
+        if (typeof email !== 'string' || !/^[A-Za-z\u00C0-\u017F\s-]+$/.test(value)) {
+            throw new Error("Ongeldige Text");
+        }
+        this.#texts4 = value;
+    }
+
 }
 
 // Functie om JSON-bestand in te laden
