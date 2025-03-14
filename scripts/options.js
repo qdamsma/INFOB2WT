@@ -41,7 +41,7 @@ function myFunction() {
     var searchForElements = function(){
         const sectionElements = document.getElementsByTagName("section");
         
-        if(sectionElements < 1){
+        if(sectionElements.length > 0){
         var z = document.createElement("option");
         z.setAttribute("value", "section");
         var t = document.createTextNode("Section");
@@ -50,11 +50,20 @@ function myFunction() {
         }
         
         const articleElements = document.getElementsByTagName("article");
-        if (articleElements.length < 1){
+        if (articleElements.length > 0){
             var z = document.createElement("option");
             z.setAttribute("value", "article");
             var t = document.createTextNode("Article");
             z.appendChild(t);
             document.getElementById("input-text").appendChild(z);
         }
+        const asideElements = document.getElementsByTagName("aside");
+        if (asideElements.length > 0){
+            var z = document.createElement("option");
+            z.setAttribute("value", "aside");
+            var t = document.createTextNode("Aside");
+            z.appendChild(t);
+            document.getElementById("input-text").appendChild(z);
+        }
+
     }

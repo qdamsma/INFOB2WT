@@ -15,7 +15,7 @@
     <title>Group 19</title>
 </head>
 
-<body>
+<body onload="searchForElements()">
     <nav class="navigation">
         <figure class="group-image">
             <img src="../images/group19.png" alt="Logo of group 19" class="banner">
@@ -52,8 +52,8 @@
                 <select id="input-text" class="input" onchange="changeTargetElement (this);">
     
                     <option value="body" selected="selected">Body</option>
-                    <option value="section">Section</option>
-                    <option value="article">Article</option>
+                    <!--<option value="section">Section</option>-->
+                    <!--<option value="article">Article</option>-->
                 </select>
                 <hr>
     
@@ -75,8 +75,8 @@
                 <br>
                 <select id="input-size" class="input" onchange="changeFontSize (this);">
     
-                    <option value="50%" selected="selected"> Small</option>
-                    <option value="75%">Medium</option>
+                    <option value="50%"> Small</option>
+                    <option value="75%" selected="selected">Medium</option>
                     <option value="100%">Large</option>
                 </select>
     
