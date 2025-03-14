@@ -14,7 +14,7 @@ class Person {
     }
 
     set firstName(value) {
-        if (typeof value !== 'string' || !/^[A-Za-z\u00C0-\u017F\s-]+$/.test(value)) {
+        if (typeof value !== 'string') {
             throw new Error("Ongeldige Voornaam");
         }
         this.#firstName = value;
@@ -25,7 +25,7 @@ class Person {
     }
 
     set lastName(value) {
-        if (typeof value !== 'string' || !/^[A-Za-z\u00C0-\u017F\s]+$/.test(value)) {
+        if (typeof value !== 'string') {
             throw new Error("Ongeldige achternaam");
         }
         this.#lastName = value;
@@ -60,10 +60,14 @@ class Course {
     }
 
     set teacher(value) {
-        if (typeof value !== 'string' || !/^[A-Za-z\u00C0-\u017F\s-]+$/.test(value)) {
+        if (typeof value === 'string') {
+            const [firstName, ...lastName] = value.split(" ");
+            this.#teacher = new Person(firstName, lastName.join(" "));
+        } else if (typeof value === 'object' && value !== null && 'firstName' in value && 'lastName' in value) {
+            this.#teacher = new Person(value.firstName, value.lastName);
+        } else {
             throw new Error("Ongeldige Teacher (naam)");
         }
-        this.#teacher = value;
     }
 
     get description() {
@@ -71,7 +75,7 @@ class Course {
     }
 
     set description(value) {
-        if (typeof value !== 'string' || !/^[A-Za-z\u00C0-\u017F\s-]+$/.test(value)) {
+        if (typeof value !== 'string') {
             throw new Error("Ongeldige Beschrijving");
         }
         this.#description = value;
@@ -123,7 +127,7 @@ class Student extends Person {
     }
 
     set age(value) {
-        if (typeof value !== 'number' || age < 0 || age > 120) {
+        if (typeof value !== 'number' || value < 0 || value > 120) {
             throw new Error("Ongeldige Leeftijd");
         }
         this.#age = value;
@@ -156,7 +160,7 @@ class Student extends Person {
     }
 
     set photo(value) {
-        if (typeof value !== 'string' || !/^(http(s?):)([/|.|\w|\s|-])*\.(?:jpg|gif|png)$/.test(photo)) {
+        if (typeof value !== 'string') {
             throw new Error("Ongeldige Foto");
         }
         this.#photo = value;
@@ -182,7 +186,7 @@ class Student extends Person {
             throw new Error("Course moet een array zijn");
         }
     
-        if (!courses.every(value => value instanceof Course)) {
+        if (!value.every(value => value instanceof Course)) {
             throw new Error("Alle courses moet van de course class zijn");
         }
         this.#courses = value;
@@ -193,7 +197,7 @@ class Student extends Person {
     }
 
     set intro(value) {
-        if (typeof value !== 'string' || !/^[A-Za-z\u00C0-\u017F\s-]+$/.test(value)) {
+        if (typeof value !== 'string') {
             throw new Error("Ongeldige Intro");
         }
         this.#intro = value;
@@ -204,7 +208,7 @@ class Student extends Person {
     }
 
     set head1(value) {
-        if (typeof value !== 'string' || !/^[A-Za-z\u00C0-\u017F\s-]+$/.test(value)) {
+        if (typeof value !== 'string') {
             throw new Error("Ongeldige Header");
         }
         this.#head1 = value;
@@ -215,7 +219,7 @@ class Student extends Person {
     }
 
     set texts1(value) {
-        if (typeof value !== 'string' || !/^[A-Za-z\u00C0-\u017F\s-]+$/.test(value)) {
+        if (typeof value !== 'string') {
             throw new Error("Ongeldige Text");
         }
         this.#texts1 = value;
@@ -226,7 +230,7 @@ class Student extends Person {
     }
 
     set head2(value) {
-        if (typeof value !== 'string' || !/^[A-Za-z\u00C0-\u017F\s-]+$/.test(value)) {
+        if (typeof value !== 'string') {
             throw new Error("Ongeldige Header");
         }
         this.#head2 = value;
@@ -237,7 +241,7 @@ class Student extends Person {
     }
 
     set texts2(value) {
-        if (typeof value !== 'string' || !/^[A-Za-z\u00C0-\u017F\s-]+$/.test(value)) {
+        if (typeof value !== 'string') {
             throw new Error("Ongeldige Text");
         }
         this.#texts2 = value;
@@ -248,7 +252,7 @@ class Student extends Person {
     }
 
     set head3(value) {
-        if (typeof value !== 'string' || !/^[A-Za-z\u00C0-\u017F\s-]+$/.test(value)) {
+        if (typeof value !== 'string') {
             throw new Error("Ongeldige Header");
         }
         this.#head3 = value;
@@ -259,7 +263,7 @@ class Student extends Person {
     }
 
     set texts3(value) {
-        if (typeof value !== 'string' || !/^[A-Za-z\u00C0-\u017F\s-]+$/.test(value)) {
+        if (typeof value !== 'string') {
             throw new Error("Ongeldige Text");
         }
         this.#texts3 = value;
@@ -270,9 +274,6 @@ class Student extends Person {
     }
 
     set head4(value) {
-        if (typeof value !== 'string' || !/^[A-Za-z\u00C0-\u017F\s-]+$/.test(value)) {
-            throw new Error("Ongeldige Header");
-        }
         this.#head4 = value;
     }
 
@@ -281,9 +282,6 @@ class Student extends Person {
     }
 
     set texts4(value) {
-        if (typeof value !== 'string' || !/^[A-Za-z\u00C0-\u017F\s-]+$/.test(value)) {
-            throw new Error("Ongeldige Text");
-        }
         this.#texts4 = value;
     }
 
@@ -292,9 +290,6 @@ class Student extends Person {
     }
 
     set headVak(value){
-        if (typeof this.value !== 'string' || !/^[A-Za-z\u00C0-\u017F\s-]+$/.test(value)) {
-            throw new Error("Ongeldige Text");
-        }
         this.#headVak = value;
     }
 }
@@ -350,7 +345,33 @@ function displayStudent(student) {
     card.append(img, name, intro);
 
     card.addEventListener('click', () => {
-        localStorage.setItem('studentData', JSON.stringify(student));
+        localStorage.setItem('studentData', JSON.stringify({
+            firstName: student.firstName,
+            lastName: student.lastName,
+            age: student.age,
+            hobbies: student.hobbies,
+            email: student.email,
+            photo: student.photo,
+            major: student.major,
+            courses: student.courses.map(course => ({
+                title: course.title,
+                teacher: {
+                    firstName: course.teacher.firstName,
+                    lastName: course.teacher.lastName
+                },
+                description: course.description
+            })),
+            intro: student.intro,
+            head1: student.head1,
+            texts1: student.texts1,
+            head2: student.head2,
+            texts2: student.texts2,
+            head3: student.head3,
+            texts3: student.texts3,
+            head4: student.head4,
+            texts4: student.texts4,
+            headVak: student.headVak
+        }));
     });
 
     // Voeg de kaart toe aan de pagina
@@ -358,15 +379,37 @@ function displayStudent(student) {
 }
 
 document.addEventListener('DOMContentLoaded', function () {
-    
     const studentData = localStorage.getItem('studentData');
 
     if (studentData) {
         const data = JSON.parse(studentData);
+
+        // Controleer of courses bestaat, anders een lege array gebruiken
+        const courses = Array.isArray(data.courses) ? data.courses.map(course => 
+            new Course(
+                course.title, 
+                course.teacher ? new Person(course.teacher.firstName, course.teacher.lastName) : null, 
+                course.description
+            )
+        ) : [];
+
         const student = new Student(
-            data.firstName, data.lastName, data.age, data.hobbies, data.email, data.photo, data.major,
-            data.courses, data.intro, data.head1, data.texts1, data.head2, data.texts2, data.head3, data.texts3, data.head4, data.texts4, data.headVak
+            data.firstName || "Onbekend", 
+            data.lastName || "Onbekend", 
+            data.age || 0, 
+            data.hobbies || [], 
+            data.email || "geen-email@example.com", 
+            data.photo || "", 
+            data.major || "Onbekend",
+            courses,  // Gebruik de gecontroleerde courses
+            data.intro || "", 
+            data.head1 || "", data.texts1 || "", 
+            data.head2 || "", data.texts2 || "", 
+            data.head3 || "", data.texts3 || "", 
+            data.head4 || "", data.texts4 || "", 
+            data.headVak || ""
         );
+
         showStudentDetails(student);
     } else {
         console.warn("Geen student data gevonden in localStorage.");
