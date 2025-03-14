@@ -68,17 +68,17 @@
         <select id="input-text" class="input" onload ="searchForElements(this);"
             onchange="changeTargetElement (this);"> 
             <option value="body">Body</option> 
-            <option value="section">Section</option>
-            <option value="article">Article</option>
+            <!--<option value="section">Section</option>-->
+            <!--<option value="article">Article</option>-->
         </select>
-        <button type="button" onclick="myFunction()">Insert option</button>
-
+        
+        <button type="button" onclick="searchForElements()">Insert option</button>
       
         <script> 
             function myFunction() {
             var x = document.getElementById("input-text");
             var option = document.createElement("option");
-            option.text = "TestTag";
+            option.text = "article";
             x.add(option);
             }
             var targetToChange = "article";
@@ -98,7 +98,7 @@
             var searchForElements = function(){
                 const sectionElements = document.getElementsByTagName("section");
                 
-                if(sectionElements < 1){
+                if(sectionElements.length > 0){
                 var z = document.createElement("option");
                 z.setAttribute("value", "section");
                 var t = document.createTextNode("Section");
@@ -107,12 +107,12 @@
                 }
                 
                 const articleElements = document.getElementsByTagName("article");
-                if (articleElements.length < 1){
-                    var z = document.createElement("option");
-                    z.setAttribute("value", "article");
-                    var t = document.createTextNode("Article");
-                    z.appendChild(t);
-                    document.getElementById("input-text").appendChild(z);
+                if (articleElements.length > 0 ){
+                    var w = document.createElement("option");
+                    w.setAttribute("value", "article");
+                    var y = document.createTextNode("Article");
+                    w.appendChild(y);
+                    document.getElementById("input-text").appendChild(w);
                 }
             }
         </script> 
