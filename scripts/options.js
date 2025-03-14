@@ -4,7 +4,7 @@ function myFunction() {
     option.text = "TestTag";
     x.add(option);
     }
-    var targetToChange = "article";
+    var targetToChange = "body";
     var changeFontStyle = function (font) { 
         
         const x = document.getElementsByTagName(targetToChange);
