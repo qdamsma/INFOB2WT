@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Beschrijving van de groep">
+    <link rel="stylesheet" href="../stylesheet/index.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <title>Group 19</title>
+</head>
+<body>
+    <nav class="navigation">
+        <figure class="group-image">
+            <img src="../images/group19.png" alt="Logo of group 19" class="banner">
+        </figure>
+        <button class="menu-toggle" aria-label="Menu">
+            ☰
+        </button>
+        <ul class="navigationnav">
+            <li class="navitem">
+                <a href="index.html" class="navlink">
+                    <b class="linktext">Home</b>
+                </a>
+            </li>
+            <li class="navitem">
+                <a href="about.html" class="navlink">
+                    <b class="linktext">About us</b>
+                </a>
+            </li>
+            <li class="navitem">
+                <a href="project.html" class="navlink">
+                    <b class="linktext">Project</b>
+                </a>
+            </li>
+        </ul>
+    </nav>
+    <article id="memberContainer" class="memberpage-content"></article>
+
+    
+    <script src="../scripts/index.js"></script>
+    <script src="../scripts/member.js" defer></script>
+     
+        <section id="output-text" class="output"> 
+            <h1 style="color:green;"> 
+                Test section 
+            </h1> 
+        </section> 
+        <article id="output-text2" class="output"> 
+            <h1 style="color:rgb(128, 0, 0);"> 
+                Test article 
+            </h1> 
+        </article>
+      
+        <select id="input-font" class="input"
+            onchange="changeFontStyle (this);"> 
+      
+            <option value="Times New Roman" 
+                selected="selected"> 
+                Times New Roman 
+            </option> 
+            <option value="Arial">Arial</option> 
+            <option value="fantasy">Fantasy</option> 
+            <option value="cursive">cursive</option> 
+        </select> 
+
+        <select id="input-text" class="input" onload ="searchForElements(this);"
+            onchange="changeTargetElement (this);"> 
+            <option value="body">Body</option> 
+            <!--<option value="section">Section</option>-->
+            <!--<option value="article">Article</option>-->
+        </select>
+        
+        <button type="button" onclick="searchForElements()">Insert option</button>
+      
+        <script> 
+            function myFunction() {
+            var x = document.getElementById("input-text");
+            var option = document.createElement("option");
+            option.text = "article";
+            x.add(option);
+            }
+            var targetToChange = "article";
+            var changeFontStyle = function (font) { 
+                
+                const x = document.getElementsByTagName(targetToChange);
+                for(let i = 0; i< x.length;i++)
+                {
+                 x[i].style.fontFamily = font.value;
+                }
+                    
+                
+            } 
+            var changeTargetElement = function(target){
+                targetToChange = target.value;
+            }
+            var searchForElements = function(){
+                const sectionElements = document.getElementsByTagName("section");
+                
+                if(sectionElements.length > 0){
+                var z = document.createElement("option");
+                z.setAttribute("value", "section");
+                var t = document.createTextNode("Section");
+                z.appendChild(t);
+                document.getElementById("input-text").appendChild(z);
+                }
+                
+                const articleElements = document.getElementsByTagName("article");
+                if (articleElements.length > 0 ){
+                    var w = document.createElement("option");
+                    w.setAttribute("value", "article");
+                    var y = document.createTextNode("Article");
+                    w.appendChild(y);
+                    document.getElementById("input-text").appendChild(w);
+                }
+            }
+        </script> 
+
+</body>
