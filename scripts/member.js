@@ -1,8 +1,37 @@
 class Person {
+
+    // #firstName;
+    // #lastName;
+
+
     constructor(firstName, lastName) {
         this.firstName = firstName;
         this.lastName = lastName;
     }
+
+    // get firstName() {
+    //     return this.#firstName;
+    // }
+
+     // PROBLEEM: hij pakt é niet in voornamen nu, kan je kijken naar een fix?
+
+    // set firstName(value) {
+    //     if (!/^[A-Za-z\s]+$/.test(value)) {
+    //         throw new Error("Ongeldige Voornaam");
+    //     }
+    //     this.#firstName = value;
+    // }
+
+    // get lastName() {
+    //     return this.#lastName;
+    // }
+
+    // set lastName(value) {
+    //     if (!/^[A-Za-z\s]+$/.test(value)) {
+    //         throw new Error("Ongeldige achternaam");
+    //     }
+    //     this.#lastName = value;
+    // }
 }
 
 class Course {
@@ -97,7 +126,11 @@ document.addEventListener('DOMContentLoaded', function () {
     const studentData = localStorage.getItem('studentData');
 
     if (studentData) {
-        const student = JSON.parse(studentData);
+        const data = JSON.parse(studentData);
+        const student = new Student(
+            data.firstName, data.lastName, data.age, data.hobbies, data.email, data.photo, data.major,
+            data.courses, data.intro, data.head1, data.texts1, data.head2, data.texts2, data.head3, data.texts3, data.head4, data.texts4
+        );
         showStudentDetails(student);
     } else {
         console.warn("Geen student data gevonden in localStorage.");
