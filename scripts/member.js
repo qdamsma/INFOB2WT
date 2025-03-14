@@ -378,7 +378,6 @@ document.addEventListener('DOMContentLoaded', function () {
     if (studentData) {
         const data = JSON.parse(studentData);
 
-        // Controleer of courses bestaat, anders een lege array gebruiken
         const courses = Array.isArray(data.courses) ? data.courses.map(course => 
             new Course(
                 course.title, 
@@ -388,20 +387,24 @@ document.addEventListener('DOMContentLoaded', function () {
         ) : [];
 
         const student = new Student(
-            data.firstName || "Onbekend", 
-            data.lastName || "Onbekend", 
-            data.age || 0, 
-            data.hobbies || [], 
-            data.email || "geen-email@example.com", 
-            data.photo || "", 
-            data.major || "Onbekend",
-            courses,  // Gebruik de gecontroleerde courses
-            data.intro || "", 
-            data.head1 || "", data.texts1 || "", 
-            data.head2 || "", data.texts2 || "", 
-            data.head3 || "", data.texts3 || "", 
-            data.head4 || "", data.texts4 || "", 
-            data.headVak || ""
+            data.firstName, 
+            data.lastName, 
+            data.age, 
+            data.hobbies, 
+            data.email, 
+            data.photo, 
+            data.major,
+            courses, 
+            data.intro, 
+            data.head1, 
+            data.texts1, 
+            data.head2, 
+            data.texts2, 
+            data.head3, 
+            data.texts3, 
+            data.head4, 
+            data.texts4, 
+            data.headVak
         );
 
         showStudentDetails(student);
@@ -498,6 +501,7 @@ function showStudentDetails(student) {
         const tooltip = document.createElement('section');
         tooltip.classList.add("tooltip")
         tooltip.textContent = course.description;
+        tooltip.style.display = "none";
         
         courseItem.appendChild(tooltip);
         courseList.appendChild(courseItem);
@@ -514,4 +518,24 @@ function showStudentDetails(student) {
 
     content.appendChild(card);
     content.appendChild(about);
+
+    courseList.addEventListener('mouseover', function (event) {
+        const target = event.target.closest('.course-item');
+        if (target) {
+            const tooltip = target.querySelector('.tooltip');
+            if (tooltip) {
+                tooltip.style.display = "block";
+            }
+        }
+    });
+
+    courseList.addEventListener('mouseout', function (event) {
+        const target = event.target.closest('.course-item');
+        if (target) {
+            const tooltip = target.querySelector('.tooltip');
+            if (tooltip) {
+                tooltip.style.display = "none";
+            }
+        }
+    });
 }
