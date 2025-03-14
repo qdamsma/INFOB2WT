@@ -15,6 +15,26 @@ function myFunction() {
             
         
     } 
+    var changeFontColor = function (color) { 
+        
+        const x = document.getElementsByTagName(targetToChange);
+        for(let i = 0; i< x.length;i++)
+        {
+         x[i].style.color = color.value;
+        }
+            
+        
+    } 
+    var changeFontSize = function (size) { 
+        
+        const x = document.getElementsByTagName(targetToChange);
+        for(let i = 0; i< x.length;i++)
+        {
+         x[i].style.fontSize = size.value;
+        }
+            
+        
+    } 
     var changeTargetElement = function(target){
         targetToChange = target.value;
     }

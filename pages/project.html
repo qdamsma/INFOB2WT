@@ -44,35 +44,45 @@
     <article class="center">
         <article class="card">
             <section id="output-text" class="output"> 
-                <h1 style="color:green;"> 
-                    Test section 
+                <h1> 
+                    Text Options: 
                 </h1> 
-            </section> 
-            <article id="output-text2" class="output"> 
-                <h1 style="color:rgb(128, 0, 0);"> 
-                    Test article 
-                </h1> 
-            </article>
-          
+            </section>           
+
+            <select id="input-text" class="input"
+                onchange="changeTargetElement (this);"> 
+
+                <option value="body" selected = "selected">Body</option> 
+                <option value="section">Section</option>
+                <option value="article">Article</option>
+            </select>
+
             <select id="input-font" class="input"
                 onchange="changeFontStyle (this);"> 
           
-                <option value="Times New Roman" 
-                    selected="selected"> 
-                    Times New Roman 
-                </option> 
+                <option value="Times New Roman" selected="selected"> Times New Roman</option> 
                 <option value="Arial">Arial</option> 
                 <option value="fantasy">Fantasy</option> 
                 <option value="cursive">cursive</option> 
             </select> 
-        
-            <select id="input-text" class="input" onload ="searchForElements(this);"
-                onchange="changeTargetElement (this);"> 
-                <option value="body">Body</option> 
-                <option value="section">Section</option>
-                <option value="article">Article</option>
+            <select id="input-color" class="input"
+                onchange="changeFontColor (this);"> 
+          
+                <option value="black" selected="selected"> Black</option> 
+                <option value="red">Red</option> 
+                <option value="blue">Blue</option> 
+                <option value="green">Green</option> 
             </select>
-            <button type="button" onclick="myFunction()">Insert option</button>
+            <select id="input-size" class="input"
+                onchange="changeFontSize (this);"> 
+          
+                <option value="5px" selected="selected"> Small</option> 
+                <option value="10px">Medium</option> 
+                <option value="15px">Large</option> 
+            </select>
+
+            
+        
         </article>
     </article>
     <h1 class="hw-h1">Het Vak</h1>
