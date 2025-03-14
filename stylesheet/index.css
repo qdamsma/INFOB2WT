@@ -43,6 +43,8 @@ body{
     padding-left: 10px;
 }
 
+
+
 .headercolor{
     color: var(--secondary-color);
     
@@ -160,6 +162,25 @@ h1{
     margin: 250px;
 }
 
+.choosefilecontainer{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 220px;
+}
+
+.choosefilecontainer > * {
+    margin-top: 20px;
+}
+
+.choosefilecontainer p {
+    width:230px;
+    height:auto;
+}
+
+
+
 table {
     width: 80%;
     margin: 20px auto;
@@ -201,3 +222,4 @@ tr:nth-child(even) {
         gap: 20px;
     }
 }
+
